@@ -1,0 +1,22 @@
+{
+  "webinarTitle": "دروازه ورود به دنیای برنامه‌نویسی",
+  "subtitle": "مقدمه‌ای جامع و کاربردی برای علاقه‌مندان به شروع برنامه‌نویسی",
+  "description": "در این وبینار با دنیای برنامه‌نویسی آشنا می‌شوید؛ از اینکه برنامه‌نویسی چیست و چه کاربردهایی دارد تا مسیر یادگیری، انتخاب مسیر تخصصی و قدم‌های تبدیل شدن به یک برنامه‌نویس.",
+  "instructor": {
+    "name": "محمد یاسین کرمی",
+    "role": "مدرس و ارائه‌دهنده وبینار برنامه‌نویسی",
+    "bio": "برنامه‌نویس و ارائه‌دهنده دوره‌های آموزش برنامه‌نویسی با هدف ساده‌سازی مسیر یادگیری برای تازه‌کاران و توسعه‌دهندگان.",
+    "image": "/instructor.png"
+  },
+  "webinarDate": "2026-08-09T16:30:49.610Z",
+  "socialLinks": {
+    "telegram": "https://t.me/fasacoders",
+    "instagram": "https://instagram.com/fasacoders",
+    "github": "https://github.com/fasacoders"
+  },
+  "logoUrl": "/logo.png",
+  "jitsiRoomName": "FasaCodersProgrammingGate",
+  "jitsiDomain": "meet.jit.si",
+  "giftMessage": "هدیه اختصاصی این وبینار پس از پایان رویداد به صورت دستی توسط مدیریت برای شما ارسال خواهد شد.",
+  "registrationUrl": "https://t.me/fasacoders"
+}

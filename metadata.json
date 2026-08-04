@@ -1,0 +1,6 @@
+{
+  "name": "پلتفرم فساکدرز لایو",
+  "description": "پلتفرم وبینار تخصصی دروازه ورود به دنیای برنامه‌نویسی - فساکدرز",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
