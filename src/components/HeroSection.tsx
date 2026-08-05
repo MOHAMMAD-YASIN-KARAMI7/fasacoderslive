@@ -70,7 +70,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
         {/* CTA Action Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-md">
           <a
-            href={config.registrationUrl || config.socialLinks.telegram || "https://t.me/fasacoders"}
+            href={config.registrationUrl || "https://t.me/fasacodersbot"}
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto flex-1 py-4 px-8 rounded-2xl bg-gradient-to-r from-cyan-500 via-cyan-400 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-slate-950 font-black text-base shadow-xl shadow-cyan-500/25 flex items-center justify-center gap-2 transition duration-200 transform hover:scale-105 cursor-pointer no-underline"

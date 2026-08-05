@@ -39,7 +39,7 @@ const defaultConfig = {
   jitsiRoomName: "FasaCodersProgrammingGate",
   jitsiDomain: "meet.jit.si",
   giftMessage: "هدیه اختصاصی این وبینار پس از پایان رویداد به صورت دستی توسط مدیریت برای شما ارسال خواهد شد.",
-  registrationUrl: "https://t.me/fasacoders"
+  registrationUrl: "https://t.me/fasacodersbot"
 };
 
 // Initialize config file if absent

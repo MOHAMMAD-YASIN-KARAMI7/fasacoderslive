@@ -7,7 +7,7 @@ interface RegistrationCTAProps {
 }
 
 export const RegistrationCTA: React.FC<RegistrationCTAProps> = ({ config }) => {
-  const regUrl = config.registrationUrl || config.socialLinks.telegram || 'https://t.me/fasacoders';
+  const regUrl = config.registrationUrl || 'https://t.me/fasacodersbot';
 
   return (
     <div id="registration-section" className="w-full max-w-2xl mx-auto">
