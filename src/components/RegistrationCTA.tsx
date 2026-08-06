@@ -7,7 +7,7 @@ interface RegistrationCTAProps {
 }
 
 export const RegistrationCTA: React.FC<RegistrationCTAProps> = ({ config }) => {
-  const regUrl = config.registrationUrl || 'https://t.me/fasacodersbot';
+  const telegramBotUrl = config.registrationUrl || 'https://t.me/fasacodersbot';
 
   return (
     <div id="registration-section" className="w-full max-w-2xl mx-auto">
@@ -19,28 +19,28 @@ export const RegistrationCTA: React.FC<RegistrationCTAProps> = ({ config }) => {
         {/* Header Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-xs font-semibold">
           <Sparkles className="w-4 h-4 text-cyan-400" />
-          <span>ثبت‌نام رایگان و رزرو صندلی وبینار</span>
+          <span>ثبت‌نام رایگان در وبینار فساکدرز</span>
         </div>
 
         {/* Title */}
         <div className="space-y-2">
           <h2 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
-            جهت ثبت‌نام در وبینار فساکدرز کلیک کنید
+            جهت ثبت‌نام در وبینار کلیک کنید
           </h2>
           <p className="text-xs sm:text-sm text-slate-300 max-w-lg mx-auto leading-relaxed">
-            برای تکمیل فرایند ثبت‌نام، دریافت لینک‌های اختصاصی، جزوه‌ها و هدیه انتهای رویداد، روی دکمه زیر کلیک کنید.
+            برای رزرو صندلی، دریافت لینک‌های اختصاصی، جزوه‌ها و اطلاع‌رسانی وبینار در ربات تلگرام روی دکمه زیر کلیک کنید.
           </p>
         </div>
 
         {/* Big Action Button */}
         <div className="pt-2 max-w-md mx-auto">
           <a
-            href={regUrl}
+            href={telegramBotUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="w-full py-4 px-8 rounded-2xl bg-gradient-to-r from-cyan-500 via-purple-600 to-pink-500 hover:from-cyan-400 hover:to-pink-600 text-white font-black text-base shadow-xl shadow-cyan-500/20 flex items-center justify-center gap-3 transition duration-200 transform hover:scale-105 cursor-pointer no-underline"
           >
-            <span>ورود به لینک ثبت‌نام وبینار</span>
+            <span>ثبت‌نام در وبینار</span>
             <ExternalLink className="w-5 h-5 text-cyan-200" />
           </a>
         </div>

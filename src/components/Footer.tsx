@@ -34,12 +34,14 @@ export const Footer: React.FC<FooterProps> = ({ config, setActiveTab }) => {
                 </button>
               </li>
               <li>
-                <button
-                  onClick={() => setActiveTab('live')}
-                  className="hover:text-cyan-400 transition"
+                <a
+                  href={`https://${config.jitsiDomain || 'meet.jit.si'}/${config.jitsiRoomName || 'FasaCodersProgrammingGate'}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-cyan-400 transition no-underline"
                 >
-                  اتاق پخش زنده (Jitsi Meet)
-                </button>
+                  ورود به وبینار (Jitsi Meet)
+                </a>
               </li>
             </ul>
           </div>

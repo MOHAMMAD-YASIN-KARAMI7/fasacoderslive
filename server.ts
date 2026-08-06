@@ -28,8 +28,8 @@ const defaultConfig = {
     bio: "برنامه‌نویس و ارائه‌دهنده دوره‌های آموزش برنامه‌نویسی با هدف ساده‌سازی مسیر یادگیری برای تازه‌کاران و توسعه‌دهندگان.",
     image: "/instructor.png"
   },
-  // Default scheduled date: 5 days from now at 19:00 IRST
-  webinarDate: new Date(Date.now() + 5 * 24 * 60 * 60 * 1000).toISOString(),
+  // Default scheduled date: Tuesday 20 Mordad 1405 at 19:00 IRST (2026-08-11 15:30 UTC)
+  webinarDate: "2026-08-11T15:30:00.000Z",
   socialLinks: {
     telegram: "https://t.me/fasacoders",
     instagram: "https://instagram.com/fasacoders",

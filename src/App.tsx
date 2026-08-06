@@ -11,7 +11,6 @@ import { RegistrationCTA } from './components/RegistrationCTA';
 import { WebinarTopics } from './components/WebinarTopics';
 import { InstructorSection } from './components/InstructorSection';
 import { SocialLinks } from './components/SocialLinks';
-import { JitsiLiveRoom } from './components/JitsiLiveRoom';
 import { Footer } from './components/Footer';
 import { TabType, WebinarConfig } from './types';
 
@@ -26,7 +25,7 @@ const defaultConfig: WebinarConfig = {
     bio: "برنامه‌نویس و ارائه‌دهنده دوره‌های آموزش برنامه‌نویسی با هدف ساده‌سازی مسیر یادگیری برای تازه‌کاران و توسعه‌دهندگان.",
     image: "/src/assets/images/instructor_portrait_1785861075193.jpg"
   },
-  webinarDate: new Date(Date.now() + 5 * 24 * 60 * 60 * 1000).toISOString(),
+  webinarDate: "2026-08-11T15:30:00.000Z",
   socialLinks: {
     telegram: "https://t.me/fasacoders",
     instagram: "https://instagram.com/fasacoders",
@@ -82,44 +81,37 @@ export default function App() {
 
       {/* Main Tab Content */}
       <main className="flex-1 relative z-10">
-        {activeTab === 'landing' && (
-          <div className="space-y-12">
-            {/* Hero Section */}
-            <HeroSection
-              config={config}
-              onRegisterClick={scrollToRegistration}
-              onLiveClick={() => setActiveTab('live')}
+        <div className="space-y-12">
+          {/* Hero Section */}
+          <HeroSection
+            config={config}
+            onRegisterClick={scrollToRegistration}
+            onLiveClick={() => {
+              window.open(`https://${config.jitsiDomain || 'meet.jit.si'}/${config.jitsiRoomName || 'FasaCodersProgrammingGate'}`, '_blank');
+            }}
+          />
+
+          {/* Countdown Timer */}
+          <div className="max-w-5xl mx-auto px-4">
+            <CountdownTimer
+              targetDateISO={config.webinarDate}
             />
-
-            {/* Countdown Timer */}
-            <div className="max-w-5xl mx-auto px-4">
-              <CountdownTimer
-                targetDateISO={config.webinarDate}
-                onLiveClick={() => setActiveTab('live')}
-              />
-            </div>
-
-            {/* Registration CTA Button Section */}
-            <div className="py-6 px-4">
-              <RegistrationCTA config={config} />
-            </div>
-
-            {/* Topics Covered */}
-            <WebinarTopics />
-
-            {/* Instructor Section */}
-            <InstructorSection instructor={config.instructor} />
-
-            {/* Social Links */}
-            <SocialLinks links={config.socialLinks} />
           </div>
-        )}
 
-        {activeTab === 'live' && (
-          <div className="py-4">
-            <JitsiLiveRoom config={config} />
+          {/* Registration CTA Button Section */}
+          <div className="py-6 px-4">
+            <RegistrationCTA config={config} />
           </div>
-        )}
+
+          {/* Topics Covered */}
+          <WebinarTopics />
+
+          {/* Instructor Section */}
+          <InstructorSection instructor={config.instructor} />
+
+          {/* Social Links */}
+          <SocialLinks links={config.socialLinks} />
+        </div>
       </main>
 
       {/* Footer */}

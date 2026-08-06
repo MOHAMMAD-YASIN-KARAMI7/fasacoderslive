@@ -75,17 +75,19 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             rel="noopener noreferrer"
             className="w-full sm:w-auto flex-1 py-4 px-8 rounded-2xl bg-gradient-to-r from-cyan-500 via-cyan-400 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-slate-950 font-black text-base shadow-xl shadow-cyan-500/25 flex items-center justify-center gap-2 transition duration-200 transform hover:scale-105 cursor-pointer no-underline"
           >
-            <span>ثبت‌نام و رزرو صندلی</span>
+            <span>ثبت‌نام در وبینار</span>
             <ArrowLeft className="w-5 h-5" />
           </a>
 
-          <button
-            onClick={onLiveClick}
-            className="w-full sm:w-auto flex-1 py-4 px-8 rounded-2xl bg-slate-900/90 hover:bg-slate-800 text-cyan-300 font-bold text-base border border-cyan-500/40 flex items-center justify-center gap-2 transition duration-200 cursor-pointer"
+          <a
+            href={`https://${config.jitsiDomain || 'meet.jit.si'}/${config.jitsiRoomName || 'FasaCodersProgrammingGate'}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto flex-1 py-4 px-8 rounded-2xl bg-slate-900/90 hover:bg-slate-800 text-cyan-300 font-bold text-base border border-cyan-500/40 flex items-center justify-center gap-2 transition duration-200 cursor-pointer no-underline"
           >
             <Radio className="w-5 h-5 text-cyan-400 animate-pulse" />
-            <span>ورود به پخش زنده</span>
-          </button>
+            <span>ورود به وبینار</span>
+          </a>
         </div>
 
         {/* Highlights Row */}

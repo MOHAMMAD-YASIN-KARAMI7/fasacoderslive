@@ -58,7 +58,7 @@ export const InstructorSection: React.FC<InstructorSectionProps> = ({ instructor
                 </div>
                 <div className="text-right">
                   <div className="text-xs text-slate-400">تخصص</div>
-                  <div className="text-xs font-bold text-slate-200">برنامه‌نویسی و وب</div>
+                  <div className="text-xs font-bold text-slate-200">برنامه‌نویس و مدرس و هوش مصنوعی</div>
                 </div>
               </div>
 

@@ -90,14 +90,24 @@ export const CountdownTimer: React.FC<CountdownTimerProps> = ({
           </div>
         </div>
 
-        {onLiveClick && (
-          <button
-            onClick={onLiveClick}
-            className="px-6 py-3 rounded-xl bg-gradient-to-r from-red-500 to-purple-600 hover:from-red-600 hover:to-purple-700 text-white font-bold shadow-lg shadow-red-500/20 transition-all transform hover:scale-105"
+        <div className="flex flex-wrap items-center gap-3">
+          <a
+            href="https://t.me/fasacodersbot"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 via-cyan-400 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-slate-950 font-black shadow-lg shadow-cyan-500/20 transition-all transform hover:scale-105 no-underline"
           >
-            ورود مستقیم به اتاق لایو
-          </button>
-        )}
+            ثبت‌نام در وبینار
+          </a>
+          {onLiveClick && (
+            <button
+              onClick={onLiveClick}
+              className="px-5 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-cyan-300 border border-cyan-500/40 font-bold transition cursor-pointer"
+            >
+              ورود به وبینار
+            </button>
+          )}
+        </div>
       </div>
     );
   }

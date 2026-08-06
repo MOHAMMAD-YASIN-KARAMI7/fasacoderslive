@@ -38,21 +38,19 @@ export const Navbar: React.FC<NavbarProps> = ({
             <span>صفحه اصلی وبینار</span>
           </button>
 
-          <button
-            onClick={() => setActiveTab('live')}
-            className={`relative flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-200 ${
-              activeTab === 'live'
-                ? 'bg-gradient-to-r from-purple-500/20 to-pink-500/20 text-purple-300 border border-purple-500/40 shadow-lg shadow-purple-500/10'
-                : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/50'
-            }`}
+          <a
+            href={`https://${config.jitsiDomain || 'meet.jit.si'}/${config.jitsiRoomName || 'FasaCodersProgrammingGate'}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold text-slate-400 hover:text-cyan-300 hover:bg-slate-800/50 transition-all duration-200 no-underline"
           >
             <span className="relative flex h-2.5 w-2.5">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-red-500"></span>
             </span>
-            <Video className="w-4 h-4" />
-            <span>اتاق پخش زنده</span>
-          </button>
+            <Video className="w-4 h-4 text-cyan-400" />
+            <span>ورود به وبینار</span>
+          </a>
         </nav>
 
         {/* Left Action / Counter */}
@@ -64,16 +62,18 @@ export const Navbar: React.FC<NavbarProps> = ({
             </div>
           )}
 
-          <button
-            onClick={() => setActiveTab('live')}
-            className="relative group overflow-hidden rounded-xl p-[1px] font-semibold text-xs sm:text-sm"
+          <a
+            href={config.registrationUrl || 'https://t.me/fasacodersbot'}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative group overflow-hidden rounded-xl p-[1px] font-semibold text-xs sm:text-sm no-underline"
           >
             <span className="absolute inset-0 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-xl group-hover:opacity-100 transition duration-300"></span>
             <span className="relative flex items-center gap-2 px-4 py-2 rounded-[11px] bg-slate-950 text-cyan-300 group-hover:bg-opacity-80 transition duration-200">
-              <Radio className="w-4 h-4 text-cyan-400 animate-pulse" />
-              <span className="font-bold">ورود به وبینار لایو</span>
+              <Sparkles className="w-4 h-4 text-cyan-400" />
+              <span className="font-bold">ثبت‌نام در وبینار</span>
             </span>
-          </button>
+          </a>
         </div>
       </div>
 
@@ -89,21 +89,21 @@ export const Navbar: React.FC<NavbarProps> = ({
           <span>صفحه اصلی</span>
         </button>
 
-        <button
-          onClick={() => setActiveTab('live')}
-          className={`flex flex-col items-center gap-1 text-xs relative ${
-            activeTab === 'live' ? 'text-purple-400 font-bold' : 'text-slate-400'
-          }`}
+        <a
+          href={`https://${config.jitsiDomain || 'meet.jit.si'}/${config.jitsiRoomName || 'FasaCodersProgrammingGate'}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex flex-col items-center gap-1 text-xs text-slate-400 hover:text-cyan-300 no-underline relative"
         >
           <div className="relative">
-            <Video className="w-5 h-5" />
+            <Video className="w-5 h-5 text-cyan-400" />
             <span className="absolute -top-1 -right-1 flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
             </span>
           </div>
-          <span>پخش زنده Jitsi</span>
-        </button>
+          <span>ورود به وبینار</span>
+        </a>
       </div>
     </header>
   );
